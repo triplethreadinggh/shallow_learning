@@ -7,5 +7,8 @@ wheels/
 *.egg-info
 target/
 
+# Media
+/scripts/media/
+
 # Virtual environments
 .venv

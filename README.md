@@ -2,7 +2,7 @@
 
 **Author:** Vojin Dzeletovic  
 **Date:** January 24, 2026
-**Revised:** 
+**Revised:** February 08, 2026 
 
 ## Setup
 ```bash
@@ -17,6 +17,16 @@ uv sync
 Run the binary classification script:
 ```bash
 nohup ./binary_class.sh > training_log.out 2>&1 &
+```
+
+## HW02Q7
+
+```bash
+cd shallow_learning/scripts/
+./animated_binary_class.sh
+
+# Go here for outputs
+cd /shallow_learning/scripts/media/videos/1080p30/
 ```
 
 ## Output
