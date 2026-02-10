@@ -29,6 +29,14 @@ cd shallow_learning/scripts/
 cd /shallow_learning/scripts/media/videos/1080p30/
 ```
 
+##HW02Q8
+
+```bash
+cd shallow_learning
+./malwaredatadownload.sh
+
+```
+
 ## Output
 
 Loss function plot saved as PDF in `scripts/output/`

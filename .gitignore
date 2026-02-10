@@ -10,5 +10,8 @@ target/
 # Media
 /scripts/media/
 
+#Data
+/data
+
 # Virtual environments
 .venv
