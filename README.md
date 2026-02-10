@@ -29,13 +29,15 @@ cd shallow_learning/scripts/
 cd /shallow_learning/scripts/media/videos/1080p30/
 ```
 
-##HW02Q8
+## HW02Q8
 
 ```bash
 cd shallow_learning
 ./malwaredatadownload.sh
-
+./scripts/multiclass_impl.sh
 ```
+
+The boxplot output will be in data as .png
 
 ## Output
 
