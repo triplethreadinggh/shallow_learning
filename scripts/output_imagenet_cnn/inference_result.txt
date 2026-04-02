@@ -1,0 +1,15 @@
+Loading model from: /home/vd0034/shallow_learning/scripts/output_imagenet_cnn/imagenet_cnn.onnx
+Loading image from: scripts/output_imagenet_cnn/sample_train.png
+Loading class names...
+
+==================================================
+Image: sample_train.png
+==================================================
+Top-5 Predictions:
+
+  1. plane                          12.02%
+  2. rifle                          9.51%
+  3. letter opener                  5.41%
+  4. hammer                         5.12%
+  5. mousetrap                      4.18%
+==================================================

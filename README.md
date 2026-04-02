@@ -65,9 +65,9 @@ tail -f logs/imagenet_training.log
 ```bash
 python3 scripts/imagenet_inference.py -i <path_to_image>
 ```
-Example with sample image:
+Example with sample image and redirection. This is how I ran my submitted solution:
 ```bash
-python3 scripts/imagenet_inference.py -i scripts/output_imagenet_cnn/sample_train.png
+python3 scripts/imagenet_inference.py -i scripts/output_imagenet_cnn/sample_train.png > scripts/output_imagenet_cnn/inference_result.txt
 ```
 Top-3 predictions:
 ```bash
