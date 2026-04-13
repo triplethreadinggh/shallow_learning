@@ -1,0 +1,276 @@
+Selected GPU: cuda:1
+Loading CelebA dataset from /data/CPE_487-587/img_align_celeba.zip...
+Total images: 202599  Using: 2025 (1.0%)
+
+Model: Diffusion
+Epochs: 100  Batch size: 128  LR: 0.0002  Save every: 10 epochs
+Trainer initialized for: Diffusion
+Epoch [1/100]  Loss: 0.9498
+Epoch [2/100]  Loss: 0.8424
+Epoch [3/100]  Loss: 0.7267
+Epoch [4/100]  Loss: 0.6073
+Epoch [5/100]  Loss: 0.5097
+Epoch [6/100]  Loss: 0.4233
+Epoch [7/100]  Loss: 0.3501
+Epoch [8/100]  Loss: 0.2956
+Epoch [9/100]  Loss: 0.2499
+/home/vd0034/shallow_learning/src/shallow_learning/deepl/gen_model.py:406: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(self.model.unet, (dummy_x, dummy_t), filename,
+W0410 01:27:15.867000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 01:27:15.867000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 01:27:15.868000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+W0410 01:27:15.868000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+/home/vd0034/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/copyreg.py:99: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+Epoch [10/100]  Loss: 0.2086
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+ONNX saved to /home/vd0034/shallow_learning/scripts/output_genmodel/diffusion/diffusion_epoch10.onnx
+Epoch [11/100]  Loss: 0.2005
+Epoch [12/100]  Loss: 0.1769
+Epoch [13/100]  Loss: 0.1706
+Epoch [14/100]  Loss: 0.1702
+Epoch [15/100]  Loss: 0.1545
+Epoch [16/100]  Loss: 0.1546
+Epoch [17/100]  Loss: 0.1568
+Epoch [18/100]  Loss: 0.1578
+Epoch [19/100]  Loss: 0.1445
+/home/vd0034/shallow_learning/src/shallow_learning/deepl/gen_model.py:406: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(self.model.unet, (dummy_x, dummy_t), filename,
+W0410 02:42:51.913000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 02:42:51.914000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 02:42:51.914000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+W0410 02:42:51.915000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+/home/vd0034/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/copyreg.py:99: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+Epoch [20/100]  Loss: 0.1358
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+ONNX saved to /home/vd0034/shallow_learning/scripts/output_genmodel/diffusion/diffusion_epoch20.onnx
+Epoch [21/100]  Loss: 0.1400
+Epoch [22/100]  Loss: 0.1241
+Epoch [23/100]  Loss: 0.1245
+Epoch [24/100]  Loss: 0.1321
+Epoch [25/100]  Loss: 0.1301
+Epoch [26/100]  Loss: 0.1203
+Epoch [27/100]  Loss: 0.1236
+Epoch [28/100]  Loss: 0.1224
+Epoch [29/100]  Loss: 0.1214
+/home/vd0034/shallow_learning/src/shallow_learning/deepl/gen_model.py:406: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(self.model.unet, (dummy_x, dummy_t), filename,
+W0410 03:57:18.721000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 03:57:18.723000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 03:57:18.723000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+W0410 03:57:18.723000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+/home/vd0034/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/copyreg.py:99: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+Epoch [30/100]  Loss: 0.1141
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+ONNX saved to /home/vd0034/shallow_learning/scripts/output_genmodel/diffusion/diffusion_epoch30.onnx
+Epoch [31/100]  Loss: 0.1091
+Epoch [32/100]  Loss: 0.1108
+Epoch [33/100]  Loss: 0.1116
+Epoch [34/100]  Loss: 0.1050
+Epoch [35/100]  Loss: 0.1021
+Epoch [36/100]  Loss: 0.1047
+Epoch [37/100]  Loss: 0.1003
+Epoch [38/100]  Loss: 0.0963
+Epoch [39/100]  Loss: 0.0999
+/home/vd0034/shallow_learning/src/shallow_learning/deepl/gen_model.py:406: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(self.model.unet, (dummy_x, dummy_t), filename,
+W0410 05:12:16.887000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 05:12:16.889000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 05:12:16.889000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+W0410 05:12:16.890000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+/home/vd0034/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/copyreg.py:99: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+Epoch [40/100]  Loss: 0.0922
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+ONNX saved to /home/vd0034/shallow_learning/scripts/output_genmodel/diffusion/diffusion_epoch40.onnx
+Epoch [41/100]  Loss: 0.0969
+Epoch [42/100]  Loss: 0.0941
+Epoch [43/100]  Loss: 0.0878
+Epoch [44/100]  Loss: 0.0890
+Epoch [45/100]  Loss: 0.0890
+Epoch [46/100]  Loss: 0.0873
+Epoch [47/100]  Loss: 0.0879
+Epoch [48/100]  Loss: 0.0855
+Epoch [49/100]  Loss: 0.0799
+/home/vd0034/shallow_learning/src/shallow_learning/deepl/gen_model.py:406: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(self.model.unet, (dummy_x, dummy_t), filename,
+W0410 06:27:14.410000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 06:27:14.412000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 06:27:14.412000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+W0410 06:27:14.413000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+/home/vd0034/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/copyreg.py:99: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+Epoch [50/100]  Loss: 0.0835
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+ONNX saved to /home/vd0034/shallow_learning/scripts/output_genmodel/diffusion/diffusion_epoch50.onnx
+Epoch [51/100]  Loss: 0.0793
+Epoch [52/100]  Loss: 0.0808
+Epoch [53/100]  Loss: 0.0755
+Epoch [54/100]  Loss: 0.0795
+Epoch [55/100]  Loss: 0.0808
+Epoch [56/100]  Loss: 0.0824
+Epoch [57/100]  Loss: 0.0766
+Epoch [58/100]  Loss: 0.0786
+Epoch [59/100]  Loss: 0.0691
+/home/vd0034/shallow_learning/src/shallow_learning/deepl/gen_model.py:406: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(self.model.unet, (dummy_x, dummy_t), filename,
+W0410 07:41:13.577000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 07:41:13.579000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 07:41:13.579000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+W0410 07:41:13.579000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+/home/vd0034/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/copyreg.py:99: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+Epoch [60/100]  Loss: 0.0713
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+ONNX saved to /home/vd0034/shallow_learning/scripts/output_genmodel/diffusion/diffusion_epoch60.onnx
+Epoch [61/100]  Loss: 0.0753
+Epoch [62/100]  Loss: 0.0740
+Epoch [63/100]  Loss: 0.0734
+Epoch [64/100]  Loss: 0.0756
+Epoch [65/100]  Loss: 0.0680
+Epoch [66/100]  Loss: 0.0734
+Epoch [67/100]  Loss: 0.0704
+Epoch [68/100]  Loss: 0.0743
+Epoch [69/100]  Loss: 0.0749
+/home/vd0034/shallow_learning/src/shallow_learning/deepl/gen_model.py:406: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(self.model.unet, (dummy_x, dummy_t), filename,
+W0410 08:55:59.898000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 08:55:59.900000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 08:55:59.900000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+W0410 08:55:59.901000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+/home/vd0034/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/copyreg.py:99: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+Epoch [70/100]  Loss: 0.0697
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+ONNX saved to /home/vd0034/shallow_learning/scripts/output_genmodel/diffusion/diffusion_epoch70.onnx
+Epoch [71/100]  Loss: 0.0742
+Epoch [72/100]  Loss: 0.0707
+Epoch [73/100]  Loss: 0.0679
+Epoch [74/100]  Loss: 0.0713
+Epoch [75/100]  Loss: 0.0688
+Epoch [76/100]  Loss: 0.0709
+Epoch [77/100]  Loss: 0.0658
+Epoch [78/100]  Loss: 0.0708
+Epoch [79/100]  Loss: 0.0677
+/home/vd0034/shallow_learning/src/shallow_learning/deepl/gen_model.py:406: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(self.model.unet, (dummy_x, dummy_t), filename,
+W0410 10:11:18.748000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 10:11:18.749000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 10:11:18.750000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+W0410 10:11:18.750000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+/home/vd0034/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/copyreg.py:99: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+Epoch [80/100]  Loss: 0.0672
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+ONNX saved to /home/vd0034/shallow_learning/scripts/output_genmodel/diffusion/diffusion_epoch80.onnx
+Epoch [81/100]  Loss: 0.0635
+Epoch [82/100]  Loss: 0.0644
+Epoch [83/100]  Loss: 0.0661
+Epoch [84/100]  Loss: 0.0673
+Epoch [85/100]  Loss: 0.0660
+Epoch [86/100]  Loss: 0.0609
+Epoch [87/100]  Loss: 0.0665
+Epoch [88/100]  Loss: 0.0623
+Epoch [89/100]  Loss: 0.0629
+/home/vd0034/shallow_learning/src/shallow_learning/deepl/gen_model.py:406: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(self.model.unet, (dummy_x, dummy_t), filename,
+W0410 11:25:13.661000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 11:25:13.663000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 11:25:13.663000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+W0410 11:25:13.664000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+/home/vd0034/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/copyreg.py:99: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+Epoch [90/100]  Loss: 0.0603
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+ONNX saved to /home/vd0034/shallow_learning/scripts/output_genmodel/diffusion/diffusion_epoch90.onnx
+Epoch [91/100]  Loss: 0.0593
+Epoch [92/100]  Loss: 0.0582
+Epoch [93/100]  Loss: 0.0640
+Epoch [94/100]  Loss: 0.0618
+Epoch [95/100]  Loss: 0.0622
+Epoch [96/100]  Loss: 0.0650
+Epoch [97/100]  Loss: 0.0614
+Epoch [98/100]  Loss: 0.0561
+Epoch [99/100]  Loss: 0.0602
+/home/vd0034/shallow_learning/src/shallow_learning/deepl/gen_model.py:406: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(self.model.unet, (dummy_x, dummy_t), filename,
+W0410 12:40:24.424000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 12:40:24.425000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 12:40:24.425000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+W0410 12:40:24.426000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+/home/vd0034/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/copyreg.py:99: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+/home/vd0034/shallow_learning/src/shallow_learning/deepl/gen_model.py:406: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(self.model.unet, (dummy_x, dummy_t), filename,
+W0410 12:40:25.176000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 12:40:25.176000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0, sampling_ratio: 'int' = -1, aligned: 'bool' = False). Treating as an Input.
+W0410 12:40:25.177000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'input' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+W0410 12:40:25.177000 4099994 torch/onnx/_internal/exporter/_schemas.py:455] Missing annotation for parameter 'boxes' from (input, boxes, output_size: 'Sequence[int]', spatial_scale: 'float' = 1.0). Treating as an Input.
+/home/vd0034/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12/copyreg.py:99: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+Epoch [100/100]  Loss: 0.0609
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+ONNX saved to /home/vd0034/shallow_learning/scripts/output_genmodel/diffusion/diffusion_epoch100.onnx
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `DiffusionUNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+ONNX saved to /home/vd0034/shallow_learning/scripts/output_genmodel/diffusion/diffusion_model.onnx
+PT weights saved to /home/vd0034/shallow_learning/scripts/output_genmodel/diffusion/diffusion_best.pt
+Plot saved to /home/vd0034/shallow_learning/scripts/output_genmodel/diffusion/diffusion_loss.png
+
+Done! Outputs saved to /home/vd0034/shallow_learning/scripts/output_genmodel/diffusion

@@ -1,0 +1,19 @@
+nohup: ignoring input
+Starting Generative Model Training...
+  Epochs:      100
+  Train ratio: 0.01
+  Save every:  10 epochs
+Training VAE...
+VAE done. Check logs/vae_training.log
+Training GAN...
+GAN done. Check logs/gan_training.log
+Training Diffusion...
+Diffusion done. Check logs/diffusion_training.log
+Running evaluation...
+Evaluation done. Check logs/genmodel_eval.log
+All done. Outputs in scripts/output_genmodel/
+Monitor logs with:
+  tail -f logs/vae_training.log
+  tail -f logs/gan_training.log
+  tail -f logs/diffusion_training.log
+  tail -f logs/genmodel_eval.log
