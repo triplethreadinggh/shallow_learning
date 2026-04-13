@@ -2,7 +2,7 @@
 
 **Author:** Vojin Dzeletovic  
 **Date:** January 24, 2026
-**Revised:** April 02, 2026 
+**Revised:** April 12, 2026 
 
 ## Setup
 ```bash
@@ -111,3 +111,45 @@ All outputs are saved in `scripts/output_acc/`:
 - `accnet_best.pt` — best checkpoint during training
 - `accnet_acc.scaler.json` — scaler used for normalization
 - `metrics_acc_<timestamp>.csv` — per epoch metrics (loss, accuracy, precision, recall, F1)
+
+## HW04 - Generative Models (VAE, GAN, Diffusion)
+### Setup
+```bash
+uv sync
+```
+### Training all three models + evaluation
+```bash
+cd shallow_learning
+nohup bash scripts/genmodel_impl.sh > logs/genmodel_main.log 2>&1 &
+echo "PID: $!"
+```
+Monitor progress:
+```bash
+tail -f logs/vae_training.log
+tail -f logs/gan_training.log
+tail -f logs/diffusion_training.log
+tail -f logs/genmodel_eval.log
+```
+### Training a single model
+```bash
+python3 scripts/genmodel_impl.py -m <VAE|GAN|Diffusion> -e <epochs> -t <train_ratio> -s <save_every>
+```
+Example:
+```bash
+python3 scripts/genmodel_impl.py -m VAE -e 100 -t 0.01 -s 10
+```
+### Evaluation only
+```bash
+python3 scripts/genmodel_eval.py
+```
+### Output
+All outputs are saved in `scripts/output_genmodel/`:
+- `vae/vae_model.onnx` — trained VAE model
+- `gan/gan_model.onnx` — trained GAN model
+- `diffusion/diffusion_model.onnx` — trained Diffusion model
+- `vae_samples.png` — 25 generated VAE images
+- `gan_samples.png` — 25 generated GAN images
+- `diffusion_samples.png` — 25 generated Diffusion images
+- `metrics_comparison.png` — aggregated quality metrics bar plot
+
+Training logs saved in `logs/`
