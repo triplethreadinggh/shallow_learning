@@ -1,7 +1,7 @@
 nohup: ignoring input
 Starting Generative Model Training...
-  Epochs:      100
-  Train ratio: 0.01
+  Epochs:      1000
+  Train ratio: 0.02
   Save every:  10 epochs
 Training VAE...
 VAE done. Check logs/vae_training.log

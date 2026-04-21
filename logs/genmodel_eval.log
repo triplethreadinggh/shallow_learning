@@ -8,11 +8,11 @@ Loaded weights from /home/vd0034/shallow_learning/scripts/output_genmodel/vae/va
 Sample grid saved to /home/vd0034/shallow_learning/scripts/output_genmodel/vae_samples.png
 
   Metrics (mean ± std over 25 samples):
-  VoL    0.0013 ± 0.0002
-  TEN    0.0356 ± 0.0104
-  HFE    0.3911 ± 0.0241
-  MLSD   0.0639 ± 0.0078
-  GLCM   4.9975 ± 1.3970
+  VoL    0.0024 ± 0.0009
+  TEN    0.0914 ± 0.0381
+  HFE    0.4768 ± 0.0239
+  MLSD   0.0782 ± 0.0112
+  GLCM   8.9524 ± 3.0134
 
 ==================================================
 Model: GAN
@@ -21,11 +21,11 @@ Loaded weights from /home/vd0034/shallow_learning/scripts/output_genmodel/gan/ga
 Sample grid saved to /home/vd0034/shallow_learning/scripts/output_genmodel/gan_samples.png
 
   Metrics (mean ± std over 25 samples):
-  VoL    0.0117 ± 0.0041
-  TEN    0.1421 ± 0.0574
-  HFE    0.5906 ± 0.0288
-  MLSD   0.0868 ± 0.0178
-  GLCM   17.2402 ± 6.5233
+  VoL    0.0205 ± 0.0132
+  TEN    0.2589 ± 0.1015
+  HFE    0.6088 ± 0.0565
+  MLSD   0.0975 ± 0.0224
+  GLCM   26.6251 ± 11.8716
 
 ==================================================
 Model: Diffusion
@@ -34,11 +34,11 @@ Loaded weights from /home/vd0034/shallow_learning/scripts/output_genmodel/diffus
 Sample grid saved to /home/vd0034/shallow_learning/scripts/output_genmodel/diffusion_samples.png
 
   Metrics (mean ± std over 25 samples):
-  VoL    0.0336 ± 0.0017
-  TEN    0.0899 ± 0.0136
-  HFE    0.6426 ± 0.0194
-  MLSD   0.1057 ± 0.0056
-  GLCM   25.4700 ± 2.2147
+  VoL    0.0112 ± 0.0020
+  TEN    0.1133 ± 0.0298
+  HFE    0.6151 ± 0.0192
+  MLSD   0.0855 ± 0.0092
+  GLCM   15.5245 ± 3.8040
 Comparison plot saved to /home/vd0034/shallow_learning/scripts/output_genmodel/metrics_comparison.png
 
 All done! Check /home/vd0034/shallow_learning/scripts/output_genmodel for outputs.

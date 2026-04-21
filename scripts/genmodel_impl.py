@@ -16,24 +16,50 @@ from shallow_learning.deepl import VAE, GAN, DiffusionModel, GenModelTrainer
 # ─────────────────────────────────────────────────────────────────────────────
 # Dataset
 # ─────────────────────────────────────────────────────────────────────────────
-
+#
+#class CelebAZipDataset(Dataset):
+#    def __init__(self, zip_path, transform=None):
+#        self.zip_path  = zip_path
+#        self.transform = transform
+#        with zipfile.ZipFile(zip_path, 'r') as zf:
+#            self.image_names = sorted([
+#                name for name in zf.namelist()
+#                if name.lower().endswith(('.jpg', '.jpeg', '.png'))
+#            ])
+#
+#    def __len__(self):
+#        return len(self.image_names)
+#
+#    def __getitem__(self, idx):
+#        with zipfile.ZipFile(self.zip_path, 'r') as zf:
+#            with zf.open(self.image_names[idx]) as f:
+#                img = Image.open(io.BytesIO(f.read())).convert('RGB')
+#        if self.transform:
+#           img = self.transform(img)
+#        return img
 class CelebAZipDataset(Dataset):
     def __init__(self, zip_path, transform=None):
         self.zip_path  = zip_path
         self.transform = transform
+        self._zf       = None  # not opened yet
         with zipfile.ZipFile(zip_path, 'r') as zf:
             self.image_names = sorted([
-                name for name in zf.namelist()
-                if name.lower().endswith(('.jpg', '.jpeg', '.png'))
+                n for n in zf.namelist()
+                if n.lower().endswith(('.jpg', '.jpeg', '.png'))
             ])
+
+    def _get_zf(self):
+        # Each worker opens its own handle lazily
+        if self._zf is None:
+            self._zf = zipfile.ZipFile(self.zip_path, 'r')
+        return self._zf
 
     def __len__(self):
         return len(self.image_names)
 
     def __getitem__(self, idx):
-        with zipfile.ZipFile(self.zip_path, 'r') as zf:
-            with zf.open(self.image_names[idx]) as f:
-                img = Image.open(io.BytesIO(f.read())).convert('RGB')
+        with self._get_zf().open(self.image_names[idx]) as f:
+            img = Image.open(io.BytesIO(f.read())).convert('RGB')
         if self.transform:
             img = self.transform(img)
         return img
@@ -125,7 +151,7 @@ def main(argv):
         dataset,
         batch_size=batch_size,
         shuffle=True,
-        num_workers=4,
+        num_workers=8,
         pin_memory=True
     )
 

@@ -2,11 +2,11 @@
 # genmodel_impl.sh
 # Train VAE, GAN, and Diffusion models on CelebA, then run evaluation
 
-EPOCHS=100
-TRAIN_RATIO=0.01
+EPOCHS=1000
+TRAIN_RATIO=0.02
 BATCH=128
 SAVE_EVERY=10
-LR=0.0002
+LR=0.0001
 
 LOG_VAE="logs/vae_training.log"
 LOG_GAN="logs/gan_training.log"
